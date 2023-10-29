@@ -13,7 +13,7 @@ int knapsack(int W, int wt[], int val[], int n) {
     if(wt[n-1] <= W) {
         return dp[n][W] = max((val[n-1] + knapsack(W-wt[n-1],wt,val,n-1)), knapsack(W,wt,val,n-1));
     }
-    return knapsack(W,wt,val,n-1);
+    return knapsack(W,wt,val,n-1); // if wt[n - 1] > W
 }
 
 int main() {
